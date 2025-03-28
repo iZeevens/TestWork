@@ -2,7 +2,108 @@
   position: relative;
   flex-grow: 1;
   width: 100%;
+  min-height: calc(100vh - 56px); /* Вычитаем высоту header */
   background-image: url("@assets/backgrounds/game.png");
   background-size: cover;
-  /* background-position: calc(60% - 50px) center; */
+  background-position: center;
+  overflow: hidden;
+}
+
+.avatar {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  bottom: 45px;
+  right: 45px;
+  z-index: 10;
+}
+
+.decor {
+  position: absolute;
+  z-index: 1;
+}
+
+.wood1 {
+  width: 270px;
+  height: 372px;
+  bottom: -45px;
+  left: -85px;
+}
+
+.wood2 {
+  width: 235px;
+  height: 323px;
+  bottom: -175px;
+  left: 40%;
+}
+
+.wood3 {
+  width: 150px;
+  height: 206px;
+  left: 68px;
+  top: 20%;
+}
+
+.wood4 {
+  width: 180px;
+  height: 247px;
+  top: -75px;
+  left: 20%;
+  opacity: 0.7;
+}
+
+.wood5 {
+  width: 180px;
+  height: 247px;
+  right: -90px;
+  top: 20%;
+  opacity: 0.7;
+}
+
+.bush1 {
+  left: 0;
+  top: 0
+}
+
+@media (max-width: 768px) {
+  .content {
+    min-height: calc(100vh - 56px);
+  }
+  
+  .avatar {
+    top: 20px;
+    bottom: auto;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .wood1, .wood2, .wood3, .wood4, .wood5 {
+    transform: scale(0.7);
+  }
+
+  .wood1 {
+    left: -60px;
+    bottom: -30px;
+  }
+
+  .wood2 {
+    left: 30%;
+    bottom: -120px;
+  }
+
+  .wood5 {
+    right: -60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .wood1, .wood2, .wood3, .wood4, .wood5 {
+    transform: scale(0.5);
+  }
 }
