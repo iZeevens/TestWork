@@ -1,0 +1,30 @@
+:root {
+  /* Colors */
+  --primary-color: #884CE3;
+  --secondary-color: #00AAFF;
+
+
+  /* Font Families */
+  --font-primary: "Aeroport", sans-serif;
+  --font-mono: "Aeroport Mono", monospace;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Font Sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 14.53px;
+  --font-size-lg: 16px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 23px;
+
+  /* Line Heights */
+  --line-height-xs: 10px;
+  --line-height-sm: 16px;
+  --line-height-md: 23px;
+
+  /* Letter Spacing */
+  --letter-spacing: -0.05em;  
+}

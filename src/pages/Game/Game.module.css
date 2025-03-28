@@ -1,0 +1,8 @@
+.content {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  background-image: url("@assets/backgrounds/game.png");
+  background-size: cover;
+  /* background-position: calc(60% - 50px) center; */
+}
