@@ -1,4 +1,5 @@
 import styles from "./Header.module.css";
+import { useNavigate } from "react-router";
 import OpenBookIcon from "@assets/icons/book-open.svg?react";
 import AwardIcon from "@assets/icons/award.svg?react";
 import GiftIcon from "@assets/icons/gift.svg?react";
@@ -6,11 +7,17 @@ import HelpIcon from "@assets/icons/help-circle.svg?react";
 import CoinIcon from "@assets/icons/coin.svg?react";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+  };
+
   return (
     <header className={styles.container}>
       <nav className={styles.nav}>
         <div className={styles.navLeft}>
-          <div className={styles.navItem}>
+          <div className={styles.navItem} onClick={handleClick}>
             <OpenBookIcon className={styles.navIcon} />
             <span className={styles.navText}>Меню</span>
           </div>

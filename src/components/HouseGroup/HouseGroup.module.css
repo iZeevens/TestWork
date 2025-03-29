@@ -1,6 +1,40 @@
 .houseGroup {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  height: 100%;
+  justify-content: center;
+}
+
+.desktopHouses {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  height: calc(100vh - 56px);
+}
+
+.buttons {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    bottom: 90px;
+    z-index: 10000;
+  }
+
+
+  .houseGroup .house:not(:nth-child(2)) {
+    display: none;
+  }
+}
+
+@media (max-height: 768px) {
+  .buttons {
+    bottom: 10px; 
+  }
 }

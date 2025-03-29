@@ -1,7 +1,14 @@
-import styles from "./Button.module.css"
+import styles from "./Button.module.css";
 
-function ButtonUI() {
-
+type ButtonType = "primary" | "secondary";
+interface IButtonUIProps extends React.HTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+  className?: string;
+  type: ButtonType;
 }
 
-export default ButtonUI
+function ButtonUI({ children, className, type = "primary", ...props }: IButtonUIProps) {
+  return <button {...props} className={`${styles[type]} ${styles.btn} ${className}`}>{children}</button>;
+}
+
+export default ButtonUI;

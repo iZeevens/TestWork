@@ -5,7 +5,6 @@
   min-height: calc(100vh - 56px);
   background-image: url("@assets/backgrounds/home.png");
   background-size: cover;
-  /* background-position: calc(60% - 50px) center; */
 }
 
 .title {
@@ -17,5 +16,62 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translateX(-50%) scale(1);
+  height: calc(100% - 5vh);
+}
+
+.dialog1 {
+  top: 20%;
+  right: 7%;
+}
+
+.dialog2 {
+  top: 60%;
+  right: 7%;
+}
+
+.dialog3 {
+  top: 0;
+  left: 7%;
+  display: none;
+}
+
+.warningText {
+  color: var(--primary-color)
+}
+
+
+@media (max-width: 1200px) {
+  .avatarImage {
+    left: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content { background-position: calc(60% - 50px) right center; }
+  .dialog1, .dialog2 {display: none;}
+  .dialog3 {
+    display: block;
+    left: 30%;
+  }
+  .avatarImage {
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-70%);
+    z-index: 10;
+  }
+}
+
+@media (max-height: 768px) {
+  .dialog1 {
+    top: 10%;
+  }
+}
+
+@media (max-width: 468px) {
+
+
+  .dialog3 {
+    left: 15%;
+  }
 }

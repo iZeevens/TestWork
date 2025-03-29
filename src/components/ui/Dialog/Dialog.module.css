@@ -1,27 +1,63 @@
 .container {
   position: absolute;
-  max-width: 346px;
-  top: 50%;
-  right: 50%;
-  transform: translate(130%, -100%);
-  padding: 30px
 }
 
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+.content {
+  position: relative;
+}
 
+.fullBubble  {
+  position: absolute;
+  z-index: 10;
+}
+
+.bubbleBackgound {
+  position: absolute;
+  left: 20px;
+  bottom: -5px;
+}
+
+.scatteringDots {
+  position: absolute;
+}
+
+.speechBubble {
+  position: absolute;
+  top: -10px;
+  left: -5px;
 }
 
 .text {
   position: relative;
-  z-index: 1;
-  margin: 0;
+  font-size: var(--font-size-xl);
+  z-index: 10;
+  padding: 40px 28px 42px 55px;
+  max-width: 335px;
 }
 
-.btn {
-  position: absolute;
+.textBottom {
+  padding: 30px 28px 62px 28px;
+}
+
+.button {
+  position: absolute !important;
+  left: 40px;
+  bottom: -20px;
+  z-index: 10;
+}
+
+.right {
+  left: unset;
+  right: 20px
+}
+
+.buttonBottom {
+  bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: var(--font-size-sm) !important;
+    max-width: 245px;
+  }
 }
