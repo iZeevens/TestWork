@@ -9,12 +9,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 4rem;
   height: calc(100vh - 56px);
 }
 
 .buttons {
   display: none;
+}
+
+.house {
+  transition: transform 0.3s ease;
+}
+
+.house:hover {
+  transform: translateY(-10px);
 }
 
 @media (max-width: 1200px) {
@@ -28,7 +36,7 @@
   }
 
 
-  .houseGroup .house:not(:nth-child(2)) {
+  .house:not(:nth-child(2)) {
     display: none;
   }
 }

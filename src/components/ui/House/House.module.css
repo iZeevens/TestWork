@@ -1,13 +1,12 @@
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 
 .image {
   position: absolute;
-  z-index: 10;
   top: -50px;
   z-index: 1000;
 }
@@ -16,11 +15,6 @@
   position: relative;
   z-index: 100;
   height: 215px;
-}
-
-.btn {
-  top: -30px;
-  z-index: 10000;
 }
 
 @media (max-width: 1200px) {

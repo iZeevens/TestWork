@@ -1,11 +1,11 @@
 import styles from "./Dialog.module.css";
 import { useNavigate } from "react-router";
 import ButtonUI from "../Button/Button";
-import FullBubble1 from "@assets/backgrounds/full-bubble-with-tail1.svg?react";
-import FullBubble2 from "@assets/backgrounds/full-bubble-with-tail2.svg?react";
-import BubbleBlackBg from "@assets/backgrounds/bubble-black-bg.svg?react";
-import ScatteringDots from "@assets/backgrounds/scattering-dots.svg?react";
-import SpeechBubble from "@assets/backgrounds/speech-bubble.svg?react";
+import FullBubble1 from "@assets/images/backgrounds/full-bubble-with-tail1.svg?react";
+import FullBubble2 from "@assets/images/backgrounds/full-bubble-with-tail2.svg?react";
+import BubbleBlackBg from "@assets/images/backgrounds/bubble-black-bg.svg?react";
+import ScatteringDots from "@assets/images/backgrounds/scattering-dots.svg?react";
+import SpeechBubble from "@assets/images/backgrounds/speech-bubble.svg?react";
 
 interface IDialogUIProps {
   text: React.ReactNode;
@@ -20,8 +20,6 @@ interface IDialogUIProps {
     right?: string;
     bottom?: string;
     rotate?: string; // Пример: "15deg"
-    opacity?: number; // 0-1
-    zIndex?: number;
   };
   hasSpeechBubble?: boolean;
 }
@@ -37,23 +35,28 @@ function DialogUI({
     top: "20px",
     left: "30px",
     rotate: "0deg",
-    opacity: 1,
-    zIndex: 3,
   },
   hasSpeechBubble = false,
 }: IDialogUIProps) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/game")
-  }
+    navigate("/game");
+  };
+
+  const BubbleComponent = type === "left" ? FullBubble1 : FullBubble2;
 
   return (
     <div className={`${styles.container} ${className}`}>
       <div className={styles.content}>
         {hasSpeechBubble && <SpeechBubble className={styles.speechBubble} />}
-        {type === "left" ? <FullBubble1 className={styles.fullBubble} /> : <FullBubble2 className={styles.fullBubble} />}
-        {!hasSpeechBubble && <BubbleBlackBg className={styles.bubbleBackgound} />}
+
+        <BubbleComponent className={styles.fullBubble} />
+
+        {!hasSpeechBubble && (
+          <BubbleBlackBg className={styles.bubbleBackgound} />
+        )}
+
         <ScatteringDots
           className={styles.scatteringDots}
           style={{
@@ -64,16 +67,20 @@ function DialogUI({
             right: dotsConfig.right,
             bottom: dotsConfig.bottom,
             transform: `rotate(${dotsConfig.rotate})`,
-            opacity: dotsConfig.opacity,
-            zIndex: dotsConfig.zIndex,
           }}
         />
-        <p className={`${styles.text} ${type === 'bottom' ? styles.textBottom : ''}`}>{text}</p>
+        <p
+          className={`${styles.text} ${
+            type === "bottom" ? styles.textBottom : ""
+          }`}
+        >
+          {text}
+        </p>
         <ButtonUI
           type="primary"
           className={`${styles.button} ${
             btnPostion === "right" ? styles.right : ""
-          } ${type === 'bottom' ? styles.buttonBottom  : ''}`}
+          } ${type === "bottom" ? styles.buttonBottom : ""}`}
           onClick={handleClick}
         >
           {buttonText}

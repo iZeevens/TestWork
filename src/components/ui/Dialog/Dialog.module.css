@@ -40,7 +40,7 @@
 }
 
 .button {
-  position: absolute !important;
+  position: absolute;
   left: 40px;
   bottom: -20px;
   z-index: 10;

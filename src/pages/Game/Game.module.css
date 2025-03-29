@@ -3,7 +3,7 @@
   flex-grow: 1;
   width: 100%;
   min-height: calc(100vh - 56px); /* Вычитаем высоту header */
-  background-image: url("@assets/backgrounds/game.png");
+  background-image: url("@assets/images/backgrounds/game.png");
   background-size: cover;
   background-position: center;
   overflow: hidden;

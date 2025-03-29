@@ -1,15 +1,18 @@
 import styles from "./Decor.module.css";
 import Wood from "@assets/icons/wood.svg?react";
-import Bush1 from "@assets/icons/bush-1.svg?react";
-import Bush1_1 from "@assets/icons/bush1-1.svg?react";
-import Bush2 from "@assets/icons/bush-2.svg?react";
-import Bush3 from "@assets/icons/bush-3.svg?react";
-import Bush3_1 from "@assets/icons/bush3-1.svg?react";
-import Bush4 from "@assets/icons/bush-4.svg?react";
+import Bush1 from "@assets/icons/bushes/bush-1.svg?react";
+import Bush1_1 from "@assets/icons/bushes/bush1-1.svg?react";
+import Bush2 from "@assets/icons/bushes/bush-2.svg?react";
+import Bush3 from "@assets/icons/bushes/bush-3.svg?react";
+import Bush3_1 from "@assets/icons/bushes/bush3-1.svg?react";
+import Bush4 from "@assets/icons/bushes/bush-4.svg?react";
 
+interface IDecoration {
+  Component: React.ElementType;
+  className: string;
+}
 
-
-const decorations = [
+const decorations: IDecoration[] = [
   { Component: Wood, className: styles.wood1 },
   { Component: Wood, className: styles.wood2 },
   { Component: Wood, className: styles.wood3 },

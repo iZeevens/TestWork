@@ -94,12 +94,10 @@
     justify-content: space-evenly;
   }
   
-
   .coin {
     width: 50px;
     height: 56px;
   }
-
 
   .coinContainer {
     position: absolute;

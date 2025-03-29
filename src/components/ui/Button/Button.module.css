@@ -1,7 +1,6 @@
 .btn {
-  position: relative;
   border: none;
-  color: #ffff;
+  color: #ffffff;
   font-size: var(--font-size-2xl);
   cursor: pointer;
 }
@@ -45,7 +44,7 @@
 @media (max-width: 768px) {
   .primary {
     font-size: var(--font-size-md);
-    width: 110px !important;
-    height: 40px !important;
+    width: 110px;
+    height: 40px;
   }
 }

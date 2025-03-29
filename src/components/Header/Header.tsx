@@ -6,35 +6,41 @@ import GiftIcon from "@assets/icons/gift.svg?react";
 import HelpIcon from "@assets/icons/help-circle.svg?react";
 import CoinIcon from "@assets/icons/coin.svg?react";
 
+const navItemsLeft = [
+  { icon: OpenBookIcon, text: "Меню", route: "/" },
+  { icon: AwardIcon, text: "Ачивки" },
+];
+
+const navItemsRight = [
+  { icon: GiftIcon, text: "Магазин", className: styles.navShop },
+  { icon: HelpIcon, text: "Словарик", className: styles.navHelp },
+];
+
 function Header() {
   const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/");
-  };
 
   return (
     <header className={styles.container}>
       <nav className={styles.nav}>
         <div className={styles.navLeft}>
-          <div className={styles.navItem} onClick={handleClick}>
-            <OpenBookIcon className={styles.navIcon} />
-            <span className={styles.navText}>Меню</span>
-          </div>
-          <div className={styles.navItem}>
-            <AwardIcon className={styles.navIcon} />
-            <span className={styles.navText}>Ачивки</span>
-          </div>
+          {navItemsLeft.map(({ icon: Icon, text, route }, index) => (
+            <div
+              key={index}
+              className={styles.navItem}
+              onClick={() => route && navigate(route)}
+            >
+              <Icon className={styles.navIcon} />
+              <span className={styles.navText}>{text}</span>
+            </div>
+          ))}
         </div>
         <div className={styles.navRight}>
-          <div className={`${styles.navItem} ${styles.navShop}`}>
-            <GiftIcon className={styles.navIcon} />
-            <span className={styles.navText}>Магазин</span>
-          </div>
-          <div className={`${styles.navItem} ${styles.navHelp}`}>
-            <HelpIcon className={styles.navIcon} />
-            <span className={styles.navText}>Словарик</span>
-          </div>
+          {navItemsRight.map(({ icon: Icon, text, className }, index) => (
+            <div key={index} className={`${styles.navItem} ${className || ""}`}>
+              <Icon className={styles.navIcon} />
+              <span className={styles.navText}>{text}</span>
+            </div>
+          ))}
         </div>
 
         <div className={styles.coinContainer}>
