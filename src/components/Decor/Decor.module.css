@@ -200,6 +200,15 @@
 }
 
 @media (max-height: 768px) {
+  .bush1_2 {
+    right: 22px;
+  }
+  
+  .bush3_1 {
+    top: 25%;
+    left: 28%;
+  }
+
   .wood3 {
     top: 5%;
   }
