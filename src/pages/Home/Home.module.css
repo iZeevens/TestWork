@@ -48,7 +48,7 @@
 }
 
 @media (max-width: 768px) {
-  .content { background-position: calc(60% - 50px) right center; }
+  .content { background-position: calc(60% - 50px) center; }
   .dialog1, .dialog2 {display: none;}
   .dialog3 {
     display: block;
@@ -69,8 +69,6 @@
 }
 
 @media (max-width: 468px) {
-
-
   .dialog3 {
     left: 15%;
   }
