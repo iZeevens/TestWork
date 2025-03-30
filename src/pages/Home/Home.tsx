@@ -7,8 +7,8 @@ interface IDialog {
   id: number;
   text: React.ReactElement | string;
   buttonText: string;
-  buttonPosition?: "right" | "left"; 
-  tailPosition?: "left" | "bottom"; 
+  buttonPosition?: "right" | "left";
+  tailPosition?: "left" | "bottom";
   className: string;
   hasSpeechBubble?: boolean;
   dotsConfig: {
@@ -18,7 +18,6 @@ interface IDialog {
     top?: string;
     bottom?: string;
   };
-  mobileOnly?: boolean;
 }
 
 const dialogs: IDialog[] = [
@@ -27,9 +26,9 @@ const dialogs: IDialog[] = [
     text: (
       <>
         Сейчас мы узнаем, как защитить свои данные на платформе объявлений. Это
-        <b>важно знать</b>, чтобы никто не смог обмануть или украсть твои данные
-        или деньги. Я буду рядом, чтобы помочь. <br />
-        <b>Готов(-а)?</b>
+        <b> важно знать</b>, чтобы никто не смог обмануть или украсть твои
+        данные или деньги. Я буду рядом, чтобы помочь. <br />
+        <b>Готов&#40;-а&#41;?</b>
       </>
     ),
     buttonText: "Далее",
@@ -48,7 +47,7 @@ const dialogs: IDialog[] = [
     id: 3,
     text: (
       <>
-        <strong>Ваш пароль — как надёжный замок!</strong> Он должен быть
+        <strong>Ваш пароль &mdash; как надёжный замок!</strong> Он должен быть
         длинным, не меньше 8 символов, и включать большие и маленькие буквы,
         цифры и специальные символы.
         <strong>Выбери один из предложенных паролей.</strong>
@@ -66,7 +65,6 @@ const dialogs: IDialog[] = [
     className: styles.dialog3,
     hasSpeechBubble: true,
     dotsConfig: { size: "200px", left: "-20px" },
-    mobileOnly: true,
   },
 ];
 

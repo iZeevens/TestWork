@@ -32,6 +32,8 @@ function HouseGroup() {
   }, []);
 
   const handleChangeIndex = (index: number) => {
+    if (index < 0 || index >= HOUSE_DATA.length) return;
+
     setSelectedIndex(index);
   };
 
