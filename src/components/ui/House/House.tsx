@@ -26,11 +26,7 @@ function HouseUI({
         src={isSelected ? SelectedHouse : House}
         alt={`${text} illustration`}
       />
-      <img
-        className={styles.ground}
-        src={groundImage}
-        alt="Ground texture"
-      ></img>
+      <img className={styles.ground} src={groundImage} alt="Ground texture" />
       <ButtonUI
         className={styles.btn}
         type="secondary"
