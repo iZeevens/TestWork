@@ -1,76 +1,62 @@
 @font-face {
   font-family: "Aeroport";
-  src: url("../assets/fonts/Aeroport-regular-trial.otf") format("opentype");
+  src: url("../assets/fonts/Aeroport.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Aeroport";
-  src: url("../assets/fonts/Aeroport-regular-italic-trial.otf") format("opentype");
+  src: url("../assets/fonts/Aeroport-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Aeroport";
-  src: url("../assets/fonts/Aeroport-light-trial.otf") format("opentype");
+  src: url("../assets/fonts/Aeroport-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Aeroport";
-  src: url("../assets/fonts/Aeroport-light-italic-trial.otf") format("opentype");
+  src: url("../assets/fonts/Aeroport-LightItalic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Aeroport";
-  src: url("../assets/fonts/Aeroport-medium-trial.otf") format("opentype");
+  src: url("../assets/fonts/Aeroport-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Aeroport";
-  src: url("../assets/fonts/Aeroport-medium-italic-trial.otf") format("opentype");
+  src: url("../assets/fonts/Aeroport-MediumItalic.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Aeroport";
-  src: url("../assets/fonts/Aeroport-bold-trial.otf") format("opentype");
+  src: url("../assets/fonts/Aeroport-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Aeroport";
-  src: url("../assets/fonts/Aeroport-bold-italic-trial.otf") format("opentype");
+  src: url("../assets/fonts/Aeroport-BoldItalic.woff2") format("woff2");
   font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Aeroport";
-  src: url("../assets/fonts/Aeroport-black.otf") format("opentype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Aeroport";
-  src: url("../assets/fonts/Aeroport-black-italic.otf") format("opentype");
-  font-weight: 900;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Aeroport Mono";
-  src: url("../assets/fonts/Aeroport-monospaced-trial.otf") format("opentype");
+  src: url("../assets/fonts/AeroportMono.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
