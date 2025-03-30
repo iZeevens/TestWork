@@ -4,7 +4,7 @@ import OpenBookIcon from "@assets/icons/book-open.svg?react";
 import AwardIcon from "@assets/icons/award.svg?react";
 import GiftIcon from "@assets/icons/gift.svg?react";
 import HelpIcon from "@assets/icons/help-circle.svg?react";
-import CoinIcon from "@assets/icons/coin.svg?react";
+import CoinIcon from "@assets/icons/coin.png";
 
 const navItemsLeft = [
   { icon: OpenBookIcon, text: "Меню", route: "/" },
@@ -44,7 +44,7 @@ function Header() {
         </div>
 
         <div className={styles.coinContainer}>
-          <CoinIcon className={styles.coin} />
+          <img src={CoinIcon} className={styles.coin} />
           <div className={styles.amount}>1000</div>
         </div>
       </nav>

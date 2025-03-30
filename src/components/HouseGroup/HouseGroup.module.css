@@ -17,14 +17,6 @@
   display: none;
 }
 
-.house {
-  transition: transform 0.3s ease;
-}
-
-.house:hover {
-  transform: translateY(-10px);
-}
-
 @media (max-width: 1200px) {
   .buttons {
     position: absolute;
@@ -35,14 +27,17 @@
     z-index: 10000;
   }
 
+  .house {
+    display: none !important;
+  }
 
-  .house:not(:nth-child(2)) {
-    display: none;
+  .active {
+    display: flex !important;
   }
 }
 
 @media (max-height: 768px) {
   .buttons {
-    bottom: 10px; 
+    bottom: 10px;
   }
 }

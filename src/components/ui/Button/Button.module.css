@@ -19,6 +19,7 @@
   border-radius: 60px;
   position: relative;
   isolation: isolate;
+  z-index: 100;
 }
 
 .secondary::before {
@@ -41,7 +42,18 @@
   padding: 2px;
 }
 
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 @media (max-width: 768px) {
+  .secondary {
+    font-size: 18px;
+    width: 190px;
+    height: 56px;
+  }
+
   .primary {
     font-size: var(--font-size-md);
     width: 110px;

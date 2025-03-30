@@ -10,7 +10,7 @@ import SpeechBubble from "@assets/images/backgrounds/speech-bubble.svg?react";
 interface IDialogUIProps {
   text: React.ReactNode;
   buttonText: string;
-  type?: "left" | "bottom";
+  tailPosition?: "left" | "bottom";
   btnPostion?: "left" | "right";
   className?: string;
   dotsConfig?: {
@@ -27,7 +27,7 @@ interface IDialogUIProps {
 function DialogUI({
   text,
   buttonText,
-  type = "left",
+  tailPosition = "left",
   btnPostion = "left",
   className = "",
   dotsConfig = {
@@ -44,7 +44,7 @@ function DialogUI({
     navigate("/game");
   };
 
-  const BubbleComponent = type === "left" ? FullBubble1 : FullBubble2;
+  const BubbleComponent = tailPosition === "left" ? FullBubble1 : FullBubble2;
 
   return (
     <div className={`${styles.container} ${className}`}>
@@ -71,7 +71,7 @@ function DialogUI({
         />
         <p
           className={`${styles.text} ${
-            type === "bottom" ? styles.textBottom : ""
+            tailPosition === "bottom" ? styles.textBottom : ""
           }`}
         >
           {text}
@@ -80,7 +80,7 @@ function DialogUI({
           type="primary"
           className={`${styles.button} ${
             btnPostion === "right" ? styles.right : ""
-          } ${type === "bottom" ? styles.buttonBottom : ""}`}
+          } ${tailPosition === "bottom" ? styles.buttonBottom : ""}`}
           onClick={handleClick}
         >
           {buttonText}

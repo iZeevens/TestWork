@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./HouseGroup.module.css";
 import HouseUI from "@components/ui/House/House";
 import FirstGround from "@assets/images/houses/house-placeholder1.png";
@@ -23,6 +23,17 @@ const HOUSE_DATA = [
 
 function HouseGroup() {
   const [selectedIndex, setSelectedIndex] = useState(1);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1200);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleChangeIndex = (index: number) => {
+    setSelectedIndex(index);
+  };
 
   return (
     <div className={styles.houseGroup}>
@@ -30,9 +41,13 @@ function HouseGroup() {
         {HOUSE_DATA.map((house, index) => (
           <HouseUI
             key={house.text}
-            className={styles.house}
+            index={index}
+            className={`${styles.house} ${
+              isMobile ? (index === selectedIndex ? styles.active : "") : ""
+            }`}
             text={house.text}
             isSelected={index === selectedIndex}
+            setSelectedIndex={handleChangeIndex}
             groundImage={house.groundImage}
           />
         ))}
@@ -43,7 +58,7 @@ function HouseGroup() {
               key={house.text}
               className={styles.btn}
               type="secondary"
-              onClick={() => setSelectedIndex(index)}
+              onClick={() => handleChangeIndex(index)}
             >
               {house.text}
             </ButtonUI>

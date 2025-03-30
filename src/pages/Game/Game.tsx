@@ -1,19 +1,18 @@
 import styles from "./Game.module.css";
-import Header from "@components/Header/Header";
 import HouseGroup from "@components/HouseGroup/HouseGroup";
-import Avatar from "@assets/icons/avatar-icon.svg?react";
+import Avatar from "@assets/icons/avatar-icon.png";
 import Decor from "@components/Decor/Decor";
+import Layout from "@components/Layout/Layout";
 
 function GamePage() {
   return (
-    <div className="container">
-      <Header />
+    <Layout>
       <main className={styles.content}>
         <HouseGroup />
-        <Avatar className={styles.avatar} />
+        <img src={Avatar} className={styles.avatar} />
         <Decor />
       </main>
-    </div>
+    </Layout>
   );
 }
 
