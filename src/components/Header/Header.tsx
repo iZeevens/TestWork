@@ -44,7 +44,7 @@ function Header() {
         </div>
 
         <div className={styles.coinContainer}>
-          <img src={CoinIcon} className={styles.coin} />
+          <img src={CoinIcon} className={styles.coin} alt="Coin icon" />
           <div className={styles.amount}>1000</div>
         </div>
       </nav>

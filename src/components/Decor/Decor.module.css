@@ -1,11 +1,18 @@
-.decorContainer {} 
-
 .decor {
+  --tree-z-index: 100;
+  --bush-z-index: 10;
+  --opacity-low: 0.7;
+  
   position: absolute;
-  z-index: 10;
+  z-index: var(--bush-z-index);
 }
 
-/* Стили для деревьев элементов */
+/* Общие стили для деревьев */
+.tree {
+  z-index: var(--tree-z-index);
+  position: absolute;
+}
+
 .tree1 {
   width: 270px;
   height: 372px;
@@ -27,12 +34,15 @@
   top: 20%;
 }
 
+.tree4, .tree5 {
+  opacity: var(--opacity-low);
+}
+
 .tree4 {
   width: 125px;
   height: 170px;
   top: -66px;
   left: 20%;
-  opacity: 0.7;
 }
 
 .tree5 {
@@ -40,15 +50,14 @@
   height: 170px;
   right: -80px;
   top: 10%;
-  opacity: 0.7;
-}
-
-/* Глобальный z-index для всех деревьев элементов */
-.tree1, .tree2, .tree3, .tree4, .tree5 {
-  z-index: 100;
 }
 
 /* Стили для кустов */
+.bush {
+  position: absolute;
+}
+
+/* Группа bush1 */
 .bush1 {
   left: 15px;
   top: 50%;
@@ -57,7 +66,7 @@
 .bush1_1 {
   right: 10%;
   top: 3%;
-  z-index: 100;
+  z-index: var(--tree-z-index);
 }
 
 .bush1_2 {
@@ -65,23 +74,26 @@
   top: 37%;
 }
 
+/* Группа bush2 */
 .bush2_1 {
   left: 68px;
   top: 40%;
 }
 
-.bush2_2 {
+.bush2_2, .bush2_3, .bush2_6 {
   width: 43px;
+}
+
+.bush2_2 {
   height: 51px;
   left: 31%;
   top: 30%;
 }
 
 .bush2_3 {
-  width: 43px;
   height: 42px;
   bottom: -15px;
-  left: 30%
+  left: 30%;
 }
 
 .bush2_4 {
@@ -99,22 +111,23 @@
 }
 
 .bush2_6 {
-  width: 43px;
-  height: 42px;
   right: -20px;
   bottom: 20%;
+}
+
+/* Группа bush3 */
+.bush3_1, .bush3_2 {
+  z-index: 1;
 }
 
 .bush3_1 {
   top: 29%;
   left: 26%;
-  z-index: 1;
 }
 
 .bush3_2 {
   top: -20px;
   right: 9%;
-  z-index: 1;
 }
 
 .bush3_3 {
@@ -122,6 +135,7 @@
   bottom: 41%;
 }
 
+/* Группа bush4 */
 .bush4_1 {
   width: 36px;
   height: 29px;
@@ -129,9 +143,12 @@
   left: 29%;
 }
 
-.bush4_2 {
+.bush4_2, .bush4_5 {
   width: 57px;
   height: 46px;
+}
+
+.bush4_2 {
   top: 34%;
   left: 33%;
 }
@@ -143,16 +160,17 @@
   right: 17%;
 }
 
+.bush4_4, .bush4_5, .bush4_6, .bush4_7 {
+  height: 51px;
+}
+
 .bush4_4 {
   width: 64px;
-  height: 51px;
   top: 22%;
   right: 7%;
 }
 
 .bush4_5 {
-  width: 64px;
-  height: 51px;
   right: 31%;
   bottom: 39%;
 }
@@ -222,14 +240,13 @@
   }
 }
 
-
 @media (max-width: 620px) {
   .tree1 {
-    left: -200px
+    left: -200px;
   }
 
   .bush1 {
-    left: 0
+    left: 0;
   }
 
   .bush1_2 {
@@ -248,7 +265,7 @@
 
   .tree3 {
     left: -70px;
-    opacity: 0.7;
+    opacity: var(--opacity-low);
   }
 }
 
